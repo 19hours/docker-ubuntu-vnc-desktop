@@ -16,12 +16,13 @@ templates = Dockerfile rootfs/etc/supervisor/conf.d/supervisord.conf
 
 # Rebuild the container image
 build: $(templates)
-	docker build -t $(REPO):$(TAG) .
+	docker build --platform linux/x86_64 -t $(REPO):$(TAG) .
 
 # Test run the container
 # the local dir will be mounted under /src read-only
 run:
 	docker run --privileged --rm \
+		--platform linux/x86_64 \
 		-p 6080:80 -p 6081:443 \
 		-v ${PWD}:/src:ro \
 		-e USER=doro -e PASSWORD=mypassword \
