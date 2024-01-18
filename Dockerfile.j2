@@ -45,6 +45,8 @@ RUN apt update \
 {%if desktop == "lxde" %}
 {%endif%}
 {%if desktop == "lxqt" %}
+RUN sudo apt-get update
+RUN sudo apt-get install lxqt-core -y
 {%endif%}
 {%if desktop == "xfce4" %}
 {%endif%}

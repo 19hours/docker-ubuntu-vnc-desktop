@@ -38,6 +38,8 @@ RUN apt update \
     && rm -rf /var/lib/apt/lists/*
 
 
+RUN sudo apt-get update
+RUN sudo apt-get install lxqt-core -y
 
 
 RUN apt update \

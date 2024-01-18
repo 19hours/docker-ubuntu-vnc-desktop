@@ -4,10 +4,10 @@
 REPO  ?= dorowu/ubuntu-desktop-lxde-vnc
 TAG   ?= latest
 # you can choose other base image versions
-IMAGE ?= ubuntu:20.04
+IMAGE ?= ubuntu:18.04
 # IMAGE ?= nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
 # choose from supported flavors (see available ones in ./flavors/*.yml)
-FLAVOR ?= lxde
+FLAVOR ?= lxqt
 # armhf or amd64
 ARCH ?= amd64
 
